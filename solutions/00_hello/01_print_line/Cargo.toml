@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-00-hello-01-print-line-solution"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

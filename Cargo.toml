@@ -1,5 +1,22 @@
 [workspace]
-members = []
+members = [
+    "exercises/00_hello/01_print_line",
+    "exercises/00_hello/02_variables",
+    "exercises/00_hello/03_mutability",
+    "exercises/00_hello/04_types",
+    "exercises/01_control_flow/01_if_expression",
+    "exercises/01_control_flow/02_for_sum",
+    "exercises/01_control_flow/03_while_countdown",
+    "exercises/01_control_flow/04_match_command",
+    "solutions/00_hello/01_print_line",
+    "solutions/00_hello/02_variables",
+    "solutions/00_hello/03_mutability",
+    "solutions/00_hello/04_types",
+    "solutions/01_control_flow/01_if_expression",
+    "solutions/01_control_flow/02_for_sum",
+    "solutions/01_control_flow/03_while_countdown",
+    "solutions/01_control_flow/04_match_command",
+]
 resolver = "3"
 
 [workspace.package]

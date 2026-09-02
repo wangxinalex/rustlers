@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-01-control-flow-02-for-sum-solution"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
