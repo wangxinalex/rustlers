@@ -1,4 +1,5 @@
 pub fn countdown(start: u32) -> Vec<u32> {
+    // TODO: include 1 in the countdown.
     let mut current = start;
     let mut values = Vec::new();
     while current > 1 {

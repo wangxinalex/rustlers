@@ -1,4 +1,5 @@
 pub fn welcome_message(_name: &str) -> String {
+    // TODO: use name in the welcome message.
     String::from("Welcome!")
 }
 

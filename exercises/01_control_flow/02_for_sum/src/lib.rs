@@ -1,4 +1,5 @@
 pub fn sum_up_to(n: u32) -> u32 {
+    // TODO: start the accumulator at zero.
     let mut total = 1;
     for value in 1..=n {
         total += value;

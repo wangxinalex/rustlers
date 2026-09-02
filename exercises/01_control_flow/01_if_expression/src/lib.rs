@@ -1,4 +1,5 @@
 pub fn classify_temperature(celsius: i32) -> &'static str {
+    // TODO: make the middle branch return "mild".
     if celsius < 10 {
         "cold"
     } else if celsius < 25 {

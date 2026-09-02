@@ -1,4 +1,5 @@
 pub fn command_label(command: &str) -> &'static str {
+    // TODO: return "starting" for the "start" command.
     match command {
         "start" => "started",
         _ => "unknown command",

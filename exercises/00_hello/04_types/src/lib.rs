@@ -1,4 +1,5 @@
 pub fn receipt_total(_price: u32, _quantity: u32) -> u32 {
+    // TODO: multiply price by quantity.
     0
 }
 

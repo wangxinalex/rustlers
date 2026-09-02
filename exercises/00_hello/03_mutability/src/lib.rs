@@ -1,4 +1,5 @@
 pub fn add_tax(price: i32) -> i32 {
+    // TODO: calculate and return the price with eight percent tax.
     price
 }
 
