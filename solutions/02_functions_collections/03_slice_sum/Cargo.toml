@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-02-functions-collections-03-slice-sum-solution"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

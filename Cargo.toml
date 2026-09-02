@@ -8,6 +8,11 @@ members = [
     "exercises/01_control_flow/02_for_sum",
     "exercises/01_control_flow/03_while_countdown",
     "exercises/01_control_flow/04_match_command",
+    "exercises/02_functions_collections/01_parameters",
+    "exercises/02_functions_collections/02_push_vec",
+    "exercises/02_functions_collections/03_slice_sum",
+    "exercises/02_functions_collections/04_word_count",
+    "exercises/02_functions_collections/05_shopping_total",
     "solutions/00_hello/01_print_line",
     "solutions/00_hello/02_variables",
     "solutions/00_hello/03_mutability",
@@ -16,6 +21,11 @@ members = [
     "solutions/01_control_flow/02_for_sum",
     "solutions/01_control_flow/03_while_countdown",
     "solutions/01_control_flow/04_match_command",
+    "solutions/02_functions_collections/01_parameters",
+    "solutions/02_functions_collections/02_push_vec",
+    "solutions/02_functions_collections/03_slice_sum",
+    "solutions/02_functions_collections/04_word_count",
+    "solutions/02_functions_collections/05_shopping_total",
 ]
 resolver = "3"
 
