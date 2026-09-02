@@ -1,3 +1,7 @@
+// Concept: mutable references and adding owned `String` values to a `Vec`.
+// Task: implement `add_item(items, item)` so it appends the item to the vector.
+// Expected behavior/output: adding `"tea"` to an empty vector leaves `["tea"]`.
+// Hint: convert the borrowed `&str` to a `String`, then call `push`.
 pub fn add_item(_items: &mut Vec<String>, _item: &str) {
     // TODO: append item to the vector.
 }

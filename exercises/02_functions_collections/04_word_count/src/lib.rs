@@ -1,3 +1,7 @@
+// Concept: string slices and iterators over whitespace-separated words.
+// Task: implement `word_count(text)` so it counts the words in a string.
+// Expected behavior/output: `word_count("one two two")` returns `3`.
+// Hint: split the text on whitespace and count the resulting pieces.
 pub fn word_count(_text: &str) -> usize {
     // TODO: count the whitespace-separated words.
     0

@@ -1,3 +1,7 @@
+// Concept: splitting and parsing two signed integers while propagating errors.
+// Task: implement `parse_pair(input)` for comma-separated integers.
+// Expected behavior/output: `parse_pair("3,4")` returns `Ok((3, 4))`; malformed input returns `Err`.
+// Hint: use `split_once(',')`, parse each trimmed part, and use `?` for failures.
 pub fn parse_pair(_input: &str) -> Result<(i32, i32), String> {
     // TODO: parse the two comma-separated integers.
     Err(String::from("pair is not implemented"))

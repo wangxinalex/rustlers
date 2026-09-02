@@ -1,3 +1,7 @@
+// Concept: filtering a vector through a mutable borrow.
+// Task: implement `retain_non_negative(numbers)` so it removes every negative number.
+// Expected behavior/output: `[3, -1, 0, -5]` becomes `[3, 0]`.
+// Hint: use `retain` with a predicate that keeps values greater than or equal to zero.
 pub fn retain_non_negative(_numbers: &mut Vec<i32>) {
     // TODO: repair this function so it removes every negative number in place.
 }
