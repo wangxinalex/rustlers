@@ -23,7 +23,7 @@
 
 ## Package inventory and exact contracts
 
-All listed packages are created under both `exercises/` and `solutions/` with the same package name, public function signatures, and tests. Exercise implementations intentionally return a simple incorrect value or incomplete behavior while remaining compilable; solution implementations satisfy the listed examples.
+All listed packages are created under both `exercises/` and `solutions/` with the same public function signatures and tests. Exercise implementations intentionally return a simple incorrect value or incomplete behavior while remaining compilable; solution implementations satisfy the listed examples. Cargo package names must be unique in one workspace, so solution names use the minimal `-solution` suffix while paths and APIs stay parallel.
 
 | Path suffix | Public contract | Required examples |
 |---|---|---|
@@ -159,6 +159,8 @@ edition = "2024"
 
 [dependencies]
 ```
+
+For the matching solution package, keep the same manifest shape and use `name = "rustlers-00-hello-01-print-line-solution"`; Cargo rejects duplicate package names in a single workspace.
 
 Use `src/lib.rs` for the function, `src/main.rs` for the fixed demonstration, and unit tests in `src/lib.rs` under `#[cfg(test)]`.
 

@@ -61,7 +61,7 @@ rustlers/
 
 Each exercise and solution is an independent package in the root workspace. A package has a small library API in `src/lib.rs`, a thin `src/main.rs` for runnable examples, and unit tests colocated with the library. This lets the checker use `cargo test` without adding a test dependency and keeps the behavior contract close to the code. Exercises that demonstrate a compile-time concept may use comments and a runtime equivalent so the starter remains checkable.
 
-The root workspace lists all exercise and solution packages explicitly. No package shares source files with another package; copying a solved exercise into the solution path remains understandable to a beginner.
+The root workspace lists all exercise and solution packages explicitly. Exercise and solution packages use unique Cargo package names because Cargo rejects duplicate names in one workspace; a solution name adds the minimal `-solution` suffix while its path, public API, tests, and behavior remain identical. No package shares source files with another package; copying a solved exercise into the solution path remains understandable to a beginner.
 
 ## Exercise contract
 
@@ -71,7 +71,7 @@ Every exercise follows these rules:
 - The learner edits a small code region marked `TODO`; surrounding setup is intentionally complete.
 - Tests assert observable behavior or a small public function result, never implementation details.
 - `src/main.rs` demonstrates the exercise with fixed, deterministic input and output.
-- The solution has the same package name and public function signatures as the starter.
+- The solution has the same public function signatures and tests as the starter; its Cargo package name uses the minimal `-solution` suffix required for unique workspace members.
 - Tests are deterministic, offline, and use only the Rust standard library.
 
 The checker treats a package with tests as a test target and reports `PASS` or `FAIL` per path. It runs in lexical numeric order, stops on the first failure by default, supports `--run-all`, accepts a direct exercise path, and can check `solutions` separately. It uses `cargo test --quiet --manifest-path <path>/Cargo.toml`; it does not mutate exercise files or copy tests between trees.
