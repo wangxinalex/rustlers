@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-04-errors-04-parse-setting-solution"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

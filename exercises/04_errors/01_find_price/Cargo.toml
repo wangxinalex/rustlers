@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-04-errors-01-find-price"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

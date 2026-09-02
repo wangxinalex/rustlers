@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-04-errors-02-parse-quantity-solution"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

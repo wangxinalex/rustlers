@@ -21,6 +21,10 @@ members = [
     "exercises/03_ownership_borrowing/06_copy_and_move",
     "exercises/03_ownership_borrowing/07_clone_when_needed",
     "exercises/03_ownership_borrowing/08_unicode_lengths",
+    "exercises/04_errors/01_find_price",
+    "exercises/04_errors/02_parse_quantity",
+    "exercises/04_errors/03_parse_pair",
+    "exercises/04_errors/04_parse_setting",
     "solutions/00_hello/01_print_line",
     "solutions/00_hello/02_variables",
     "solutions/00_hello/03_mutability",
@@ -42,6 +46,10 @@ members = [
     "solutions/03_ownership_borrowing/06_copy_and_move-solution",
     "solutions/03_ownership_borrowing/07_clone_when_needed-solution",
     "solutions/03_ownership_borrowing/08_unicode_lengths-solution",
+    "solutions/04_errors/01_find_price-solution",
+    "solutions/04_errors/02_parse_quantity-solution",
+    "solutions/04_errors/03_parse_pair-solution",
+    "solutions/04_errors/04_parse_setting-solution",
 ]
 resolver = "3"
 
