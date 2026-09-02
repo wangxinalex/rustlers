@@ -50,6 +50,10 @@ members = [
     "solutions/04_errors/02_parse_quantity-solution",
     "solutions/04_errors/03_parse_pair-solution",
     "solutions/04_errors/04_parse_setting-solution",
+    "exercises/05_mini_cli/01_text_stats",
+    "exercises/05_mini_cli/02_file_report",
+    "solutions/05_mini_cli/01_text_stats",
+    "solutions/05_mini_cli/02_file_report",
 ]
 resolver = "3"
 
