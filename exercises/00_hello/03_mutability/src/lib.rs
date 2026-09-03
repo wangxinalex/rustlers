@@ -4,8 +4,6 @@
 // Hint: add `price * 8 / 100` to a mutable price variable.
 pub fn add_tax(price: i32) -> i32 {
     // TODO: calculate and return the price with eight percent tax.
-    let mut price = price;
-    price += price * 8 / 100;
     price
 }
 
