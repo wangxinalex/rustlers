@@ -1,7 +1,8 @@
 // Concept: count lines, whitespace-separated words, and UTF-8 bytes.
 // Task: implement `stats` for borrowed text.
 // Expected behavior/output: `one two\nthree` has 2 lines, 3 words, and 13 bytes.
-// Hint: handle the empty string before using `lines().count()`.
+// Hint: use `lines().count()`, `split_whitespace().count()`, and `len()`.
+// All three already return zero for empty text; no special branch is needed.
 pub struct TextStats {
     pub lines: usize,
     pub words: usize,

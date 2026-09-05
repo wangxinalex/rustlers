@@ -19,4 +19,5 @@ for the sample text.
 ## Hint
 
 Use `lines().count()`, `split_whitespace().count()`, and `len()`; the empty
-string naturally has zero lines.
+string naturally produces zero for all three. No special empty-input branch
+is needed.

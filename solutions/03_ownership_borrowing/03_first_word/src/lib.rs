@@ -15,4 +15,10 @@ mod tests {
     fn first_word_skips_leading_whitespace() {
         assert_eq!(first_word("  rust"), "rust");
     }
+
+    #[test]
+    fn first_word_returns_empty_when_no_word_exists() {
+        assert_eq!(first_word(""), "");
+        assert_eq!(first_word(" \t\n"), "");
+    }
 }

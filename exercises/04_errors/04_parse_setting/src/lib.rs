@@ -1,7 +1,9 @@
 // Concept: validating a small `key=value` configuration line.
 // Task: implement `parse_setting(line)` for the required `port` key and numeric value.
 // Expected behavior/output: `parse_setting("port=8080")` returns `Ok(("port", 8080))`; wrong keys or missing values return `Err`.
-// Hint: use `split_once('=')`, check for `"port"`, then parse the value as `u32` with `?`.
+// Hint: convert `split_once('=')` from `Option` to `Result` with `ok_or`
+// and a `String` error before `?`, then check for `"port"`. Parse as `u32`
+// and convert `ParseIntError` to `String` with `map_err` before the next `?`.
 pub fn parse_setting(_line: &str) -> Result<(&str, u32), String> {
     // TODO: parse and validate a port setting.
     Err(String::from("setting is not implemented"))
