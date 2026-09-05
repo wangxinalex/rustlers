@@ -13,15 +13,21 @@ between the input and output lifetimes here.
 ## Task
 
 Implement `first_word(text)` so it skips leading whitespace and returns the
-first remaining word.
+first remaining word. Return `""` if there is no word.
 
 ## Expected behavior/output
 
 `first_word("hello world")` returns `"hello"`, while `first_word("  rust")`
-returns `"rust"`.
+returns `"rust"`. Empty or whitespace-only input returns `""`.
 
 ## Hint
 
-Split the borrowed text on whitespace and take the first item.
-Read compiler errors before reaching for `clone`; cloning is not the first fix
-for an ownership problem.
+`split_whitespace()` produces borrowed words and skips leading whitespace.
+Its `next()` method returns `Option<&str>`: `Some(word)` when a word exists,
+or `None` when there is no word. `Option` will be covered in more detail in
+the next chapter; here it lets you handle an empty result safely.
+
+Use `unwrap_or` to extract the word with `""` as the fallback. Unlike
+`unwrap()`, this handles empty and whitespace-only inputs without panicking.
+The word already borrows from the input, so no `String` allocation or
+`clone` is needed.

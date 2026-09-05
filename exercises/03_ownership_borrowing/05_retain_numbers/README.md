@@ -20,6 +20,14 @@ from the vector.
 
 ## Hint
 
-Use `retain` with a predicate that keeps values greater than or equal to zero.
-Read compiler errors before reaching for `clone`; cloning is not the first fix
-for an ownership problem.
+`retain` changes the existing vector and takes a predicate: a small function
+that returns `true` to keep an element or `false` to remove it.
+
+You can write the predicate as a closure with the shape `|number| condition`.
+The parameter between the bars is the current element, and the expression
+after the bars must return a `bool`.
+
+Here `number` is an `&i32`, even though the vector itself is mutably borrowed.
+Use `*number` to read the integer before comparing it with zero. Keep zero as
+well as positive values. `retain` returns `()`, so call it to mutate the
+vector in place; no replacement vector or `clone` is needed.

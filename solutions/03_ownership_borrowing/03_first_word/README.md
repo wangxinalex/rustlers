@@ -17,7 +17,7 @@ This package contains the reference answer for `first_word(text)`.
 ## Expected behavior/output
 
 `first_word("hello world")` returns `"hello"`, while `first_word("  rust")`
-returns `"rust"`.
+returns `"rust"`. Empty or whitespace-only input returns `""`.
 
 ## Hint
 

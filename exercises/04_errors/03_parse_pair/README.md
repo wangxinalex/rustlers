@@ -21,5 +21,12 @@ values return `Err`; the demo prints `Ok((3, 4))`.
 
 ## Hint
 
-Use `split_once(',')`, parse each trimmed part, and use `?` to propagate each
-failure without defining a custom error type.
+`split_once(',')` returns `Option<(&str, &str)>`: `Some` contains the two
+parts, and `None` means the comma is missing. Before using `?` in this
+`Result`-returning function, turn that `Option` into a `Result` with
+`ok_or(String::from("..."))`, choosing a message for the missing separator.
+This turns `Some(parts)` into `Ok(parts)` and `None` into `Err(message)`.
+
+Trim each part and parse it as `i32`. As in `parse_quantity`, convert each
+`ParseIntError` to a readable `String` with `map_err` before using `?`.
+Once both numbers are available, return the pair inside `Ok`.
