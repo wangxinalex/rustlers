@@ -18,4 +18,4 @@
 
 ## 下一章
 
-完成本章后进入 `03_ownership_borrowing`。
+完成以上五项练习后，再进入 `03_ownership_borrowing`。
