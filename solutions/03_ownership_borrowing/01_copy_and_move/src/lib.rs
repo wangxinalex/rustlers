@@ -1,12 +1,12 @@
 pub fn copy_and_move() -> (i32, usize) {
     let number = 14;
-    let copied_number = number;
-    let _original_number = number;
+    let _copied_number = number;
+    let number_still_usable = number;
 
     let text = String::from("move");
     let moved_text = text;
 
-    (copied_number, moved_text.len())
+    (number_still_usable, moved_text.len())
 }
 
 #[cfg(test)]

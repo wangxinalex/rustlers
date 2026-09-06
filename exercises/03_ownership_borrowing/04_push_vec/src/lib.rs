@@ -3,7 +3,7 @@
 // Expected behavior/output: adding `"tea"` to an empty vector leaves `["tea"]`.
 // Hint: convert the borrowed `&str` to a `String`, then call `push`.
 pub fn add_item(_items: &mut Vec<String>, _item: &str) {
-    // TODO: append item to the vector.
+    unimplemented!("append an owned item to the vector")
 }
 
 #[cfg(test)]

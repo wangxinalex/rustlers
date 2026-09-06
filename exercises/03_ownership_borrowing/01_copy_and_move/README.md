@@ -12,7 +12,9 @@ binding and the old binding cannot be used.
 
 ## Task
 
-Implement `copy_and_move()` so it returns `(14, 4)` and makes the two
+Before coding, predict why a second use of an `i32` binding after assignment
+is valid, while a second use of the moved `String` binding is rejected.
+Then implement `copy_and_move()` so it returns `(14, 4)` and makes the two
 assignment behaviors visible.
 
 ## Expected behavior/output
@@ -22,6 +24,7 @@ assignment behaviors visible.
 
 ## Hint
 
-Assign `14` to a second integer binding, then move a four-letter `String` and
-use the new binding. Read compiler errors before reaching for `clone`; cloning
-is not the first fix for an ownership problem.
+Assign `14` to another integer binding and use the original afterward. Then
+assign a four-letter `String` and use its new binding. Read compiler errors
+before reaching for `clone`; cloning is not the first fix for an ownership
+problem.

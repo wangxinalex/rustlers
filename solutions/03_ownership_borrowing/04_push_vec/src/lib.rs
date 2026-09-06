@@ -1,5 +1,5 @@
 pub fn add_item(items: &mut Vec<String>, item: &str) {
-    items.push(item.to_string());
+    items.push(item.to_owned());
 }
 
 #[cfg(test)]
