@@ -16,5 +16,9 @@ mod tests {
             duplicate_for_two_places(String::from("notes")),
             ("notes".into(), "notes".into())
         );
+        assert_eq!(
+            duplicate_for_two_places(String::from("draft")),
+            ("draft".into(), "draft".into())
+        );
     }
 }
