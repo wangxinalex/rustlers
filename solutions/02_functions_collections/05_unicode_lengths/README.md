@@ -2,13 +2,14 @@
 
 ## Concept
 
-Counting Unicode text without confusing characters and UTF-8 storage bytes.
+This pre-ownership lesson accepts `&str`, a view of UTF-8 text. It counts
+Unicode text without confusing scalar values and storage bytes.
 
-## Ownership rule
+## Text lengths
 
-Borrowing `&str` lets the function inspect the original text without taking
-ownership. Its representation still has UTF-8 length rules that are separate
-from ownership.
+`text.len()` counts UTF-8 bytes. `text.chars().count()` counts Unicode scalar
+values. These counts differ for text such as `"你好"`, whose two scalar values
+use six UTF-8 bytes.
 
 ## Task
 
@@ -21,6 +22,4 @@ This package contains the reference answer for `text_lengths(text)`.
 
 ## Hint
 
-`String::len()` counts UTF-8 bytes and `chars().count()` counts Unicode scalar
-values. Do not slice by byte index. Read compiler errors before reaching for
-`clone`; cloning is not the first fix for an ownership problem.
+Return `(text.chars().count(), text.len())`. Do not slice text by byte index.

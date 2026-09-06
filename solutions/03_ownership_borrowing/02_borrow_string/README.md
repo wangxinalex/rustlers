@@ -2,12 +2,13 @@
 
 ## Concept
 
-Inspecting a `String` through a shared reference.
+Inspecting text through a shared `&str` reference.
 
 ## Ownership rule
 
-Shared borrowing with `&String` lets a function read the value without taking
-ownership, so the caller can keep using its `String`.
+`&str` is a shared view of text. Passing `&String` coerces to `&str`, and a
+string literal is already an `&str`. The function reads the text without
+taking ownership, so the caller can keep using its `String`.
 
 ## Task
 
@@ -15,11 +16,15 @@ This package contains the reference answer for `length_after_borrow(text)`.
 
 ## Expected behavior/output
 
-`length_after_borrow(&"rust".to_string())` returns `4`, and the demo prints
-`4`.
+Both inputs below return `4`:
+
+```rust
+let text = String::from("rust");
+assert_eq!(length_after_borrow(&text), 4); // `&String` coerces to `&str`
+assert_eq!(length_after_borrow("rust"), 4); // string literal: `&str`
+```
 
 ## Hint
 
-Compare the implementation with the exercise README and its test. Read
-compiler errors before reaching for `clone`; cloning is not the first fix for
-an ownership problem.
+Use `&str` when a function only needs to read text, rather than requiring a
+specific `String` allocation.
