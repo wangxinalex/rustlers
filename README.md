@@ -17,8 +17,8 @@ cargo --version
 |---|---|---:|
 | `00_hello` | program shape, printing, variables, mutability, types | 4 |
 | `01_control_flow` | expressions, conditions, loops, `match` | 4 |
-| `02_functions_collections` | functions, `Vec`, `String`, iteration | 5 |
-| `03_ownership_borrowing` | moves, `Copy`, `clone`, references, slices, mutable borrowing, UTF-8 strings | 8 |
+| `02_functions_collections` | functions, collections, strings, slices, iteration | 5 |
+| `03_ownership_borrowing` | moves, `Copy`, shared and mutable borrows, `clone`, owned return values, slices | 8 |
 | `04_errors` | `Option`, `Result`, parsing, `?` | 4 |
 | `05_mini_cli` | file input and text statistics as an applied capstone | 2 |
 
@@ -35,18 +35,18 @@ cargo --version
 | 7 | `01_control_flow/03_while_countdown` | 用 `while` 循环生成倒计时，实现 `countdown()`。 |
 | 8 | `01_control_flow/04_match_command` | 用 `match` 处理命令和通配分支，实现 `command_label()`。 |
 | 9 | `02_functions_collections/01_parameters` | 定义带参数和返回值的函数，实现 `greet()`。 |
-| 10 | `02_functions_collections/02_push_vec` | 通过可变借用向 `Vec<String>` 添加项目。 |
-| 11 | `02_functions_collections/03_slice_sum` | 借用切片并遍历求和，实现 `total()`。 |
-| 12 | `02_functions_collections/04_word_count` | 用空白分割统计单词，实现 `word_count()`。 |
-| 13 | `02_functions_collections/05_shopping_total` | 汇总价格并应用整数折扣，实现 `shopping_total()`。 |
-| 14 | `03_ownership_borrowing/01_borrow_string` | 通过 `&String` 借用文本并读取长度。 |
-| 15 | `03_ownership_borrowing/02_return_string` | 从 `&str` 构造并返回拥有所有权的 `String`。 |
-| 16 | `03_ownership_borrowing/03_first_word` | 借用字符串切片，跳过前导空白并取第一个单词。 |
-| 17 | `03_ownership_borrowing/04_mutable_string` | 通过 `&mut String` 原地追加后缀。 |
+| 10 | `02_functions_collections/02_slice_sum` | 借用切片并遍历求和，实现 `total()`。 |
+| 11 | `02_functions_collections/03_word_count` | 用空白分割统计单词，实现 `word_count()`。 |
+| 12 | `02_functions_collections/04_shopping_total` | 汇总价格并应用整数折扣，实现 `shopping_total()`。 |
+| 13 | `02_functions_collections/05_unicode_lengths` | 区分 Unicode 字符数量和 UTF-8 字节长度。 |
+| 14 | `03_ownership_borrowing/01_copy_and_move` | 对比 `i32` 的 `Copy` 和 `String` 的移动。 |
+| 15 | `03_ownership_borrowing/02_borrow_string` | 通过 `&str` 共享借用文本并读取长度。 |
+| 16 | `03_ownership_borrowing/03_mutable_string` | 通过 `&mut String` 原地追加后缀。 |
+| 17 | `03_ownership_borrowing/04_push_vec` | 通过可变借用向 `Vec<String>` 添加项目。 |
 | 18 | `03_ownership_borrowing/05_retain_numbers` | 通过可变借用原地保留非负整数。 |
-| 19 | `03_ownership_borrowing/06_copy_and_move` | 对比 `i32` 的 `Copy` 和 `String` 的移动。 |
-| 20 | `03_ownership_borrowing/07_clone_when_needed` | 只有两个位置都需要所有权时才使用 `clone`。 |
-| 21 | `03_ownership_borrowing/08_unicode_lengths` | 区分 Unicode 字符数量和 UTF-8 字节长度。 |
+| 19 | `03_ownership_borrowing/06_clone_when_needed` | 只有两个位置都需要所有权时才使用 `clone`。 |
+| 20 | `03_ownership_borrowing/07_return_string` | 从 `&str` 构造并返回拥有所有权的 `String`。 |
+| 21 | `03_ownership_borrowing/08_first_word` | 借用字符串切片并返回第一个单词。 |
 | 22 | `04_errors/01_find_price` | 用 `Option` 表示找得到或找不到价格。 |
 | 23 | `04_errors/02_parse_quantity` | 用 `Result` 解析正整数并报告错误。 |
 | 24 | `04_errors/03_parse_pair` | 分割并用 `?` 传播两个整数的解析错误。 |
@@ -84,6 +84,6 @@ sh scripts/verify_solutions.sh                  # 参考实现快捷入口
 
 ## 所有权章节的八项重点
 
-`03_ownership_borrowing` 用八个练习集中练习：借用 `String`、返回所有权、字符串切片、可变借用 `String`、原地修改 `Vec<i32>`、区分 `Copy` 与移动、只在确实需要时使用 `clone`，以及区分 UTF-8 字节长度和 Unicode 字符数量。
+`03_ownership_borrowing` 用八个练习按从移动到切片的顺序集中练习：区分 `Copy` 与移动、共享和可变借用、原地修改 `Vec`、只在确实需要时使用 `clone`、返回拥有所有权的值，以及借用字符串切片。
 
 建议在六章中为 `03_ownership_borrowing` 额外留出时间：它是后续 `Result` 和文件 CLI 练习的基础。每次遇到编译器错误，先阅读错误指出的移动、借用或生命周期关系，再决定是否需要改变代码；不要把 `clone` 当作默认修复方式。

@@ -8,8 +8,8 @@
 
 1. `00_hello`：程序结构、打印、变量、可变性和类型。
 2. `01_control_flow`：表达式、条件、循环和 `match`。
-3. `02_functions_collections`：函数、`Vec`、`String` 和迭代。
-4. `03_ownership_borrowing`：移动、借用、切片和 UTF-8 字符串。
+3. `02_functions_collections`：函数、集合、字符串、切片和迭代。
+4. `03_ownership_borrowing`：所有权、借用和切片。
 5. `04_errors`：`Option`、`Result`、解析和 `?`。
 6. `05_mini_cli`：文件输入与文本统计。
 

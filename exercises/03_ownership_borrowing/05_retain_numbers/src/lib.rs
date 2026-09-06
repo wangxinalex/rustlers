@@ -6,7 +6,7 @@
 // to read the integer and compare it with zero, keeping zero too.
 // The vector is changed in place; no clone or replacement is needed.
 pub fn retain_non_negative(_numbers: &mut Vec<i32>) {
-    // TODO: repair this function so it removes every negative number in place.
+    unimplemented!("retain only non-negative values")
 }
 
 #[cfg(test)]
