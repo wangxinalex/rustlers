@@ -3,8 +3,7 @@
 // Expected behavior/output: `build_greeting("Mia")` returns `"Hello, Mia!"`.
 // Hint: format a new owned `String` from `name`.
 pub fn build_greeting(_name: &str) -> String {
-    // TODO: build and return an owned greeting.
-    String::new()
+    unimplemented!("return an owned greeting")
 }
 
 #[cfg(test)]

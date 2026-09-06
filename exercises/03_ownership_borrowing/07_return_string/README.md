@@ -7,7 +7,8 @@ Constructing an owned `String` from a borrowed string slice.
 ## Ownership rule
 
 Returning a `String` transfers ownership of the new value to the caller. A
-borrowed `&str` can be used to construct that owned result.
+borrowed `&str` can be used to construct that owned result. `format!` allocates
+a new owned result for the caller.
 
 ## Task
 
@@ -20,5 +21,6 @@ greeting.
 
 ## Hint
 
-Format a new owned `String` from `name`. Read compiler errors before reaching
-for `clone`; cloning is not the first fix for an ownership problem.
+Use `format!` to allocate a new owned `String` from `name`. Read compiler
+errors before reaching for `clone`; cloning is not the first fix for an
+ownership problem.

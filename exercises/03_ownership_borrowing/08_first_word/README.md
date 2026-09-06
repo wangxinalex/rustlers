@@ -23,11 +23,11 @@ returns `"rust"`. Empty or whitespace-only input returns `""`.
 ## Hint
 
 `split_whitespace()` produces borrowed words and skips leading whitespace.
-Its `next()` method returns `Option<&str>`: `Some(word)` when a word exists,
-or `None` when there is no word. `Option` will be covered in more detail in
-the next chapter; here it lets you handle an empty result safely.
+`split_whitespace().next()` yields `Option<&str>`: `Some(word)` when a word
+exists, or `None` when there is no word. `Option` will be covered in more
+detail in the next chapter; here it lets you handle an empty result safely.
 
-Use `unwrap_or` to extract the word with `""` as the fallback. Unlike
-`unwrap()`, this handles empty and whitespace-only inputs without panicking.
-The word already borrows from the input, so no `String` allocation or
-`clone` is needed.
+Use `unwrap_or("")` to extract the word with a safe fallback. Unlike
+`unwrap()`, this handles empty and whitespace-only inputs without panicking or
+allocating. The word already borrows from the input, so no `String` allocation
+or `clone` is needed.

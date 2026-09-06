@@ -5,8 +5,7 @@
 // or `None`. Use `unwrap_or` with `""` for the missing word, not `unwrap()`.
 // The word is already borrowed; no allocation or clone is needed.
 pub fn first_word(_text: &str) -> &str {
-    // TODO: return the first word while borrowing from text.
-    ""
+    unimplemented!("return the first borrowed word")
 }
 
 #[cfg(test)]
