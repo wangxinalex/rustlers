@@ -6,6 +6,26 @@ Make the Rustlers ownership chapter teach one dependency-ordered idea at a
 time. Every starter must remain intentionally incomplete, compile as a
 workspace member, and have a corresponding solution that passes its tests.
 
+## Learning-First Acceptance Criteria
+
+Passing a test is evidence, not the learning goal. A learner completing this
+chapter must be able to predict who owns a value after an assignment, choose a
+shared or mutable borrow for its purpose, explain when a clone is necessary,
+and recognize that a returned `&str` borrows rather than allocates.
+
+Each exercise therefore has one primary concept and introduces at most one
+new piece of supporting syntax. Its README explains the prerequisite in plain
+language before asking the learner to use it; its starter fails for the exact
+behavior the learner must supply; and its tests check an observable result or
+that a caller can still use a borrowed value. For compile-time-only rules such
+as use-after-move, a `compile_fail` example makes the compiler feedback part
+of the lesson. Hints explain unfamiliar syntax and the reason it is needed,
+but do not provide the final expression.
+
+No exercise is considered well-designed merely because its expected output
+can be hard-coded. The exercise body, README, and test together must make the
+intended ownership decision the shortest and clearest route to a solution.
+
 ## Problem
 
 The current chapter begins with borrowing before it establishes move and
