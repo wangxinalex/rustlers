@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-03-ownership-borrowing-02-borrow-string"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

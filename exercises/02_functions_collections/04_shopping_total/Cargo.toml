@@ -1,0 +1,6 @@
+[package]
+name = "rustlers-02-functions-collections-04-shopping-total"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
